@@ -1,0 +1,56 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <button type="button" class="navbar-btn" (click)="openSidebar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+    <ul class="navbar-nav justify-content-between w-100">
+      <li class="nav-item active d-flex">
+        <img
+          src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png"
+        />
+        <a class="nav-link" href="#"
+          >Keep <span class="sr-only">(current)</span></a
+        >
+        <div class="input-group ml-4" [class.searchFocus]="searchFocus">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1" [class.searchFocusIcon]="searchFocus">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+            </div>
+            <input
+              type="text"
+              class="form-control no-border"
+              placeholder="Username"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+              (focus)="searchStart()"
+              (blur)="searchStart()"
+            />
+          </div>
+      </li>
+      
+       
+      
+      <li>
+        <button class="navbar-btn icon-button ml-2">
+            <i class="fa fa-repeat" aria-hidden="true"></i>
+          </button >
+          <button class="navbar-btn icon-button">
+            <i class="fa fa-list" aria-hidden="true"></i>
+          </button>
+          <button class="navbar-btn icon-button">
+            <i class="fa fa-cog" aria-hidden="true"></i>
+          </button>
+          <button class="navbar-btn icon-button ml-5">
+            <i class="fa fa-th" aria-hidden="true"></i>
+          </button>
+          <img src="https://cdn.pixabay.com/photo/2018/08/18/18/50/sunset-3615276_1280.jpg"  class="nav-img mx-2"/>
+      </li>
+    </ul>
+  </div>
+ 
+</nav>
+<div class="content">
+<google-sidebar [open]="sidebarStatus"></google-sidebar>
+</div>

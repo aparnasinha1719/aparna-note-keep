@@ -1,0 +1,40 @@
+
+<div #mynote class="card my-5 mx-auto">
+  <div class="card-body p-2">
+    <form [formGroup]="noteForm">
+<div class="input-group " *ngIf="openCard">
+    <input type="text" class="form-control font-weight-bold" placeholder="Title" aria-label="Recipient's username" aria-describedby="basic-addon2" formControlName="title">
+    <div class="input-group-append ">
+      <span class="input-group-text note-action-wrapper note-action-btn" id="basic-addon2">
+        <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+        </span>
+    </div>
+  </div>
+  <div class="input-group ">
+    <input type="text" class="form-control" placeholder="Take a Note..." aria-label="Recipient's username" aria-describedby="basic-addon2" (focus)="openNoteEditor()" formControlName="content">
+    <div class="input-group-append "  *ngIf="!openCard">
+      <span class="input-group-text note-action-wrapper  note-icons" id="basic-addon2">
+          <i class="fa fa-check-square-o note-action-btn" aria-hidden="true"></i>
+          <i class="fa fa-paint-brush note-action-btn" aria-hidden="true"></i>
+          <i class="fa fa-picture-o note-action-btn" aria-hidden="true"></i>
+        </span>
+    </div>
+  </div>
+  <div class="d-flex justify-content-between mt-2"  *ngIf="openCard">
+    <div class="d-flex align-items-center note-icons" >
+      <i class="fa fa-check-square-o note-action-btn" aria-hidden="true"></i>
+      <i class="fa fa-paint-brush note-action-btn" aria-hidden="true"></i>
+      <i class="fa fa-picture-o note-action-btn" aria-hidden="true"></i>
+      <i class="fa fa-check-square-o note-action-btn" aria-hidden="true"></i>
+      <i class="fa fa-paint-brush note-action-btn" aria-hidden="true"></i>
+      <i class="fa fa-picture-o note-action-btn" aria-hidden="true"></i>
+      <i class="fa fa-check-square-o note-action-btn" aria-hidden="true"></i>
+      <i class="fa fa-paint-brush note-action-btn" aria-hidden="true"></i>
+    </div>
+    <a href="#" class="btn btn-light">Close</a>
+  </div>
+</form>
+</div>
+</div>
+<note-list [notes]="this.noteDatas"></note-list>
+

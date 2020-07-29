@@ -1,0 +1,61 @@
+.navbar-btn{
+    padding: 10px;
+    border-radius: 50%;
+    border: none !important;
+    box-shadow: none;
+    background-color: white;
+}
+.navbar-btn:hover,.navbar-btn:active, .navbar-btn.active{
+background-color: rgb(230,230,230);
+outline: none;
+}
+.navbar-btn svg, .navbar-btn i{
+    color: #5f6368;
+    font-size: 1.4em;
+}
+.navbar{
+    border-bottom: 1px solid lightgray;
+}
+.nav-item a{
+   color: #5f6368 !important;
+   font-size: 1.3rem;
+
+}
+.nav-item a:hover{
+    text-decoration: underline;
+}
+.icon-button{
+    width:47px;
+}
+.nav-img{
+    width:44px;
+    border-radius: 50%;
+}
+
+.input-group{
+    width:600px;
+    height:46px;
+    border-radius:8px;
+}
+.input-group .input-group-text{
+    background-color: #f1f3f4;
+    border: 0;
+    cursor: pointer;
+    border-top-left-radius:8px;
+    border-bottom-left-radius:8px;
+}
+.input-group .form-control{
+    border: none;
+    height:100%;
+    box-shadow: none;
+    border-top-right-radius:8px;
+    border-bottom-right-radius:8px;
+    background-color: #f1f3f4;
+}
+.input-group .form-control:focus, .input-group .searchFocusIcon{
+    background: white;
+    
+}
+.searchFocus{
+    box-shadow: 0 1px 1px 0 rgba(65, 69, 73, 0.3),0 1px 3px 0 rgba(65, 69, 73, 0.15) ;
+}

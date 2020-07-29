@@ -1,0 +1,20 @@
+<div class="d-flex justify-content-start flex-wrap">
+    <div class="card m-3" *ngFor="let note of notes">
+        <i class="fa fa-check-circle tick-icon show-Btn" aria-hidden="true"></i>
+        <div class="card-body p-2">
+            <div class="d-flex justify-content-between align-items-center note-icons2 ">
+                <h6 class="m-0 font-weight-bold">{{note.title}}</h6>
+                <i class="fa fa-thumb-tack note-action-btn show-Btn" aria-hidden="true"></i>
+            </div>
+            <p>{{note.content}}</p>
+                <div class="d-flex align-items-center justify-content-between note-icons flex-wrap show-Btn" >
+                  <i class="fa fa-check-square-o note-action-btn" aria-hidden="true"></i>
+                  <i class="fa fa-paint-brush note-action-btn" aria-hidden="true"></i>
+                  <i class="fa fa-picture-o note-action-btn" aria-hidden="true"></i>
+                  <i class="fa fa-check-square-o note-action-btn" aria-hidden="true"></i>
+                  <i class="fa fa-paint-brush note-action-btn" aria-hidden="true"></i>
+                  <i class="fa fa-picture-o note-action-btn" aria-hidden="true"></i>
+                </div>
+        </div>
+    </div>
+</div>

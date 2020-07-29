@@ -1,0 +1,27 @@
+<div class="d-flex">
+<div class="list-group py-2" [class.sidebar-close]="!open">
+    <a [routerLink]="['/google-notes']" routerLinkActive="router-link-active" (click)="setActiveItem('notes')" [class.active]="activeItem == 'notes'" class="list-group-item list-group-item-action active">
+        <i class="fa fa-lightbulb-o mr-4" aria-hidden="true"></i>
+        <span>Notes</span>
+    </a>
+    <a [routerLink]="['/google-demo']" routerLinkActive="router-link-active" (click)="setActiveItem('reminder')" [class.active]="activeItem == 'reminder'"class="list-group-item list-group-item-action">
+        <i class="fa fa-bell-o mr-4" aria-hidden="true"></i>
+        <span>Reminder</span>
+        </a>
+    <a [routerLink]="['/google-demo']" routerLinkActive="router-link-active" (click)="setActiveItem('edit')" [class.active]="activeItem == 'edit'" class="list-group-item list-group-item-action">
+        <i class="fa fa-pencil mr-4" aria-hidden="true"></i>
+        <span>Edit</span>
+        </a>
+    <a [routerLink]="['/google-demo']" routerLinkActive="router-link-active" (click)="setActiveItem('archive')" [class.active]="activeItem == 'archive'" class="list-group-item list-group-item-action">
+        <i class="fa fa-archive mr-4" aria-hidden="true"></i>
+        <span>Archive</span>
+        </a>
+    <a [routerLink]="['/google-demo']" routerLinkActive="router-link-active" (click)="setActiveItem('trash')" [class.active]="activeItem == 'trash'" class="list-group-item list-group-item-action">
+        <i class="fa fa-trash mr-4" aria-hidden="true"></i>
+        <span>Trash</span>
+        </a>
+  </div>
+  <div class="content">
+      <router-outlet></router-outlet>
+  </div>
+</div>

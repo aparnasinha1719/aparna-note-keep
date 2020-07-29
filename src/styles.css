@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+.note-action-btn:hover{
+    background: #e9ecef;
+    cursor:pointer;
+}
+
+.note-icons i{
+    padding: 8px;
+    border-radius: 50% !important;
+}
